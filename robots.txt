@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://evseevfedor.github.io/breathing-practice-478/sitemap.xml
