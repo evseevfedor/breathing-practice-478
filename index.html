@@ -1,0 +1,44 @@
+<!-- 
+Copyright 2025 Bc. Fedor Evseev
+Licensed under the Apache License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- SEO meta-теги -->
+  <meta name="description" content="A modern 4-7-8 breathing exercise web app for relaxation, stress relief, and mindfulness. Practice deep breathing with guided animation to improve focus and calm your mind.">
+  <meta name="keywords" content="breathing exercise, 4-7-8 breathing, guided breathing, relaxation, stress relief, meditation, deep breathing, mindfulness, calm your mind, breath control, web breathing practice">
+  <meta name="author" content="Bc. Fedor Evseev">
+  <meta name="robots" content="index, follow">
+  <title>4-7-8 Breathing Practice - Relax & Reduce Stress</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="image/favicon.png">
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Практика дыхания 4-7-8</h1>
+    
+    <!-- Отдельный контейнер для таймера -->
+    <div class="timer-container">
+      <div class="timer" id="timer-display">00:00</div>
+    </div>
+    
+    <!-- Контейнер для круга с анимацией -->
+    <div class="animation-container">
+      <div class="circle" id="breath-circle"></div>
+    </div>
+    
+    <div class="controls">
+      <button id="startBtn">Start</button>
+      <button id="pauseBtn">Pause</button>
+      <button id="playBtn" style="display: none;">Play</button>
+      <button id="stopBtn">Stop</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+/*
+Copyright 2025 Bc. Fedor Evsev
+Licensed under the Apache License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0
+*/
+/* ===== Общие стили ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: linear-gradient(90deg, #0c5a6a, #0fa);
+  box-shadow: inset 0px 0px 90px rgba(0, 0, 0, 0.5);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+/* ===== Контейнер для анимации ===== */
+.animation-container {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+/* ===== Анимированный круг ===== */
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-right: none;
+  border-top: none;
+  background-clip: padding-box;
+  box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: width 1s ease-in-out, height 1s ease-in-out;
+  animation: spin 5s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.timer-container {
+  width: 140px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2); /* Чуть прозрачнее */
+  border-radius: 20px; /* Более плавные края */
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 0 8px rgba(255, 255, 255, 0.4); /* Градиентная тень */
+  padding: 12px 24px; /* Больше пространства внутри */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Улучшает читаемость */
+}
+
+.timer {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+.controls {
+  display: flex;
+  gap: 15px;
+}
+
+/* ===== Улучшенные стили кнопок ===== */
+button {
+  font-size: 1rem;
+  padding: 14px 28px; /* Увеличенные кнопки */
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.3s;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  backdrop-filter: blur(8px); /* Лёгкое размытие */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+button:active {
+  transform: scale(0.97);
+}
